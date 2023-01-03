@@ -62,12 +62,39 @@ body{
     margin-top: 60px;
     border-radius: 50px;    
 }
-.score{
+.player1{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    color: aliceblue;
+    
+}
+.scoreP1{
     background-color: rgba(28, 29, 29, 0.733);
     width: 260px;
     height: 50px;
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 10px;
+    border-radius: 10px;
+    color: rgb(108, 226, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+.player2{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: aliceblue;
+}    
+.scoreP2{
+    background-color: rgba(28, 29, 29, 0.733);
+    width: 260px;
+    height: 50px;
+    margin-left: 10px;
     border-radius: 10px;
     color: rgb(108, 226, 12);
     display: flex;
@@ -79,7 +106,7 @@ body{
 .controles{
     width: 200px;
     height: 200px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 80px;
     display: flex;
     flex-direction: column;
