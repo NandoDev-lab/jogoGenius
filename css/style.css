@@ -1,124 +1,57 @@
- @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap'); 
- @import url('https://fonts.googleapis.com/css2?family=Monoton:wght@400&display=swap');
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;  
-}
-body{
-    width: 100vw;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-.logo-game h1{  
+#score-board {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.player-score {
     text-align: center;
-    font-style: italic;
-    color: aliceblue;
-    font-family: Monoton; 
-    font-size: 80px;
-    border: 2px solid greenyellow;
-    border-radius: 10px;
-}
-.tabuleiro{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid greenyellow;
-    border-radius: 10px;
-    padding: 40px;
-    width: 600px;
-    height: 600px;
-      
-    
-    
-}
-.superior{
-    height: 100%;
-    display: flex;
-}
-.inferior{
-    height: 100%;
-    display: flex;
 }
 
-.botao{
-    width: 100%;
-    height: 100%;
-    border-radius: 150px;
-}
-#azul{background-color: blue;left: 10px;}
-#vermelho{background-color: red;}
-#amarelo{background-color: yellow;}
-#verde{background-color: green;}
 
-.painel{
-    width: 350px;
-    height: 400px;
-    background-color: black;
-    position: absolute;
-    align-self: center;
-    margin-top: 60px;
-    border-radius: 50px;    
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 10px;
 }
-.player1{
-    display: flex;    
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    color: aliceblue;
-    
+
+.color-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
 }
-.scoreP1{
-    background-color: rgba(28, 29, 29, 0.733);
-    width: 260px;
-    height: 50px;
-    margin-left: 10px;
-    border-radius: 10px;
-    color: rgb(108, 226, 12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    font-family: 'Orbitron', sans-serif;
+
+#red {
+    background-color: darkred;
 }
-.player2{
-    display: flex;    
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    color: aliceblue;
-}    
-.scoreP2{
-    background-color: rgba(28, 29, 29, 0.733);
-    width: 260px;
-    height: 50px;
-    margin-left: 10px;
-    border-radius: 10px;
-    color: rgb(108, 226, 12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    font-family: 'Orbitron', sans-serif;
+
+#green {
+    background-color: darkgreen;
 }
-.controles{
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
-    margin-left: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+
+#blue {
+    background-color: darkblue;
 }
-.control{
-    width: 100%;
-    height: 50%;
-    border-radius: 20px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-size: 30px;
-    font-weight: bolder;
+
+#yellow {
+    background-color: goldenrod;
+}
+
+.color-button.active {
+    filter: brightness(1.5);
 }
